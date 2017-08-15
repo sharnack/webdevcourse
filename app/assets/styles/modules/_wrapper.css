@@ -1,0 +1,36 @@
+.wrapper {
+	padding-left: 18px;
+	padding-right: 18px;
+	max-width: 1236px; /* adding padding l+r in, because of border-box measuring */
+	margin: 0 auto;
+	overflow: hidden;
+
+	&--medium {
+		max-width: 976px;
+	}
+
+	&--no-padding-until-medium {
+		padding-right: 0;
+		padding-left: 0;
+
+		@mixin atMedium {
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+	}
+
+	/* .wrapper elements nested in another .wrapper element 
+	should no longer have any horizontal padding */
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--b-margin {
+		margin-bottom: 1rem;
+
+		@mixin atSmall {
+			margin-bottom: 3.875rem;
+		}
+	}
+}
