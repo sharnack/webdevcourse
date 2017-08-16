@@ -19,6 +19,16 @@
 		}
 	}
 
+	&--no-padding-until-large {
+		padding-right: 0;
+		padding-left: 0;
+
+		@mixin atLarge {
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+	}
+
 	/* .wrapper elements nested in another .wrapper element 
 	should no longer have any horizontal padding */
 	.wrapper {
