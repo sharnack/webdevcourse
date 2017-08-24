@@ -5,3 +5,5 @@ function Person(fullName, passion) {
 		console.log("Hi! I'm " + this.name + "! I love " + this.passion + "!");
 	}
 }
+
+module.exports = Person;
